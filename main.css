@@ -1,0 +1,341 @@
+/* Removes default margins, paddings, and sets box-sizing to border-box for consistent element sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Makes sizing easier to manage */
+}
+
+/*  - General page styles  - */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and modern font */
+  background-color: #0a0a0a; /* Very dark background for a sleek look */
+  color: #f0f8ff; /* Soft light blue text to contrast the dark background */
+  line-height: 1.6; /* Adds some breathing room between lines of text */
+  animation: fadeIn 1s ease forwards; /* Smooth fade-in effect when the page loads */
+}
+
+/*-Header area at the top of the page-*/
+header {
+  background-color: #0d1117;/*Slightly lighter dark shade for the header*/
+  padding: 10px 20px;/*Adds space inside the header*/
+  align-items: center;/*Aligns items vertically centered in the flex container*/
+  justify-content: space-between;/*Pushes title to left and nav to right*/
+  border-bottom: 2px solid #00f0ff;/*Thin neon blue border to separate header from content*/
+  display: flex;/*Displays children in a horizontal row*/
+  position: fixed;/*Keeps header at top even when scrolling*/
+  top: 0;/*Positions it at the very top*/
+  left: 0;/*Aligns it to the left edge*/
+  width: 100%;/*Header takes full screen width*/
+  padding: 15px;/*Overrides earlier padding value with uniform 15px*/
+  z-index: 1000;/*Keeps header above other elements*/
+}
+
+/*-Main heading -*/
+header h1 {
+  font-size: 2.5em;/*Makes the title text large*/
+  color: #00f0ff;/*Neon blue color for futuristic look*/
+  text-shadow: 0 0 8px #00f0ff;/*Glowing text effect*/
+}
+
+/*-Highlighted part of the title using span-*/
+header h1 span {
+  color: #ff8000;/*Neon orange for visual emphasis*/
+  text-shadow: 0 0 8px #ff8000;/*Matches text with glowing effect*/
+}
+
+/*-Navigation links container-*/
+nav {
+  margin-top: 10px;/*Adds spacing above navigation*/
+}
+
+nav a {
+  color: #00f0ff;/*Same neon blue for consistency*/
+  text-decoration: none;/*Removes underlines from links*/
+  margin: 0 15px;/*Adds space between each link*/
+  font-size: 1.1em;/*Slightly increases link text size*/
+  transition: color 0.3s ease, text-shadow 0.3s ease;/*Smooth color and glow transition on hover*/
+}
+
+/*-Hover effect for nav links-*/
+nav a:hover {
+  color: #ff8000;/*Switches link color to orange*/
+  text-shadow: 0 0 10px #ff8000;/*Adds orange glow when hovered*/
+}
+
+.area {
+  padding-top: 5%;/*Adds top padding to push content below fixed header*/
+}
+
+/*-Hero Section -*/
+.columns {
+  display: flex;/*Displays content in a row*/
+  flex-wrap: wrap;/*Allows wrapping on smaller screens*/
+  align-items: center;/*Vertically center aligns content*/
+  justify-content: center;/*Horizontally centers the whole block*/
+  padding: 1px 10px;/*Adds padding inside the container*/
+  background: linear-gradient(145deg, #0d1117, #0a0a0a);/*Subtle dark gradient background*/
+  column-count: 2;/*Suggests two columns*/
+}
+
+/*-Image on the left side of hero section-*/
+.img {
+  align-self: left;/*Aligns image to the left of the flex line*/
+  max-width: 100%;/*Prevents image from stretching outside its container*/
+  width: 90%;/*Restricts width to 90% of container*/
+  margin: 20px;/*Adds margin around the image*/
+  border: 2px solid #00f0ff;/*Blue border around image*/
+  border-radius: 10px;/*Rounds image corners*/
+  box-shadow: 0 0 20px #00f0ff;/*Blue glowing shadow*/
+  transition: transform 0.4s ease, box-shadow 0.4s ease;/*Smooth scaling and shadow effect on hover*/
+}
+
+/*-Image hover effect-*/
+.img:hover {
+  transform: scale(1.05);/*Enlarges image slightly on hover*/
+  box-shadow: 0 0 25px #ff8000;/*Switches to orange glow on hover*/
+}
+
+/*-Column for text-*/
+.col {
+  max-width: 500px;/*Limits text block width*/
+  margin: 20px;/*Adds space around the text column*/
+  width: 100%;/*Takes full width of its flex cell*/
+  padding: 10px;/*Adds inner padding*/
+}
+
+/*-Main subheading in hero section-*/
+.col h2 {
+  font-size: 2em;/*Makes subheading prominent*/
+  color: #00f0ff;/*Matches site color scheme*/
+  margin-bottom: 10px;/*Adds space below heading*/
+  text-shadow: 0 0 6px #00f0ff;/*Adds a soft blue glow*/
+}
+
+/*-Container for informational boxes-*/
+.box-section {
+  padding: 0px;/*No extra padding inside container*/
+  display: flex;/*Places info boxes side-by-side*/
+  justify-content: center;/*Centers boxes horizontally*/
+  gap: 0px;/*No gap between boxes*/
+}
+
+.box-section h3 {
+  color: #00f0ff;/*Matches site color scheme*/
+  text-shadow: 0 0 8px #00f0ff;/*Matches text with glowing effect*/
+}
+
+/*-Individual content boxes-*/
+.info-box {
+  text-align: justify;/*Evenly aligns text along both sides*/
+  width: 45%;/*Box width is nearly half the container*/
+  float: left;/*Attempts to float box left*/
+  border: 2px solid;/*Border around the box, default color*/
+  padding: 10px;/*Inner space around content*/
+  cursor: pointer;/*Changes mouse to pointer on hover*/
+  margin-bottom: 30px;/*Space below box*/
+  background-color: #0d1117;/*Dark background consistent with theme*/
+  margin: 20px;/*uniform 20px margins*/
+  border-radius: 10px;/*Rounds corners of the box*/
+  box-shadow: 0 0 15px #00f0ff50;/*Subtle glowing border*/
+  transition: box-shadow 0.3s ease;/*Glow intensifies smoothly on hover*/
+}
+
+/*-Hover effect for info boxes-*/
+.info-box:hover {
+  box-shadow: 0 0 25px #00f0ff;/*Stronger glow when hovered*/
+}
+
+/*-Heading inside the info box-*/
+.info-box h3 {
+  text-align: center;/*Centers heading inside the box*/
+}
+
+/*-Links inside the info box-*/
+.info-box a {
+  text-align: center;/*Centers the link content*/
+  color: #ff8000;/*Neon orange for visual emphasis*/
+  text-shadow: 0 0 8px #ff8000;/*Matches text with glowing effect*/
+  transition: transform 0.4s ease, box-shadow 0.4s ease;/*Smooth transform and glow effect on hover*/
+}
+
+/*-Additional section with centered content-*/
+.section {
+  padding: 0px;/*No padding added*/
+  text-align: center;/*Centers all text inside this section*/
+}
+
+/*-Link styling inside the section-*/
+.section a {
+  font-weight: bold;/*Makes links bold*/
+  display: inline-block;/*Behaves like block with inline flow*/
+  margin-bottom: 10px;/*Space below each link*/
+}
+
+
+/*-Fade-in animation definition-*/
+@keyframes fadeIn {
+  0% { opacity: 0; } /* Starts fully transparent */
+  100% { opacity: 1; } /* Ends fully visible */
+}
+
+
+
+/* DATA & STATISTICS PAGE */
+
+/* Styling for the navigation links */
+.nav-links a {
+  margin-left: 20px; /* Adds space between each link */
+  text-decoration: none; /* Removes underline from links */
+  color: white; /* Makes the text white */
+  font-weight: bold; /* Makes the text stand out */
+}
+
+/* When hovering over a nav link, links are underlined*/
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Container for all the data sections */
+.data-sections {
+  padding: 20px; /* Adds some space around the content */
+  padding-top: 8%;/* Padding above the content so that navbar does not overlap with content. */
+}
+
+/* Each data box is a flex container with a neon border and shadow */
+.data-box {
+  display: flex; /* Places image and content side by side */
+  background-color: #0d1117; /* Slightly lighter dark for contrast */
+  margin-bottom: 20px; /* Space between each box */
+  padding: 15px; /* Padding inside the box */
+  box-shadow: 0 0 20px #00f0ff; /* Glowing neon blue shadow */
+  border: 2px solid #00f0ff; /* Matches the glow with a solid border */
+  border-radius: 8px; /* Slightly rounded corners for a smooth look */
+  align-items: center; /* Keeps image and text vertically aligned */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover effect */
+}
+
+/* Styling for the image inside each data box */
+.data-box img {
+  width: 35%; /* Fixed size to keep layout consistent */
+  height: auto;
+  margin-right: 20px; /* Space between image and text */
+}
+
+/* When hovering over the whole data box */
+.data-box:hover {
+  transform: scale(1.01); /* Slight zoom in */
+  box-shadow: 0 0 25px #ff8000; /* Changes glow to neon orange on hover */
+}
+
+/* Styling for the headings inside the data box */
+.data-content h2 {
+  margin-top: 0; /* Removes default top margin */
+  color: #ff8000; /* Golden yellow for headings to pop against the dark bg */
+}
+
+/* Paragraph text inside the data box */
+.data-content p {
+  margin: 8px 0; /* Small space above and below each paragraph */
+  color: #ffffff; /* Subtle white */
+}
+
+/* Styling for the citation or reference links */
+.data-content a {
+  color: #0077cc; /* Cool blue for link text */
+  text-decoration: none; /* No underline to keep it clean */
+}
+
+/* On hover, underline the link to show it's clickable */
+.data-content a:hover {
+  text-decoration: underline;
+}
+
+
+
+/*  - THREAT AWARENESS & HELPLINE PAGE  - */
+
+/* Main container for the entire Threat Awareness section */
+.threat-main {
+  padding: 20px; /* Adds spacing around the content */
+  padding-top: 8%; /* Adjust this to match the navbar's height */
+}
+
+/* This grid holds all the threat cards in 3 columns */
+.threat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+  gap: 20px; /* Space between each card */
+  margin-bottom: 40px; /* Adds space between the grid and the footer */
+}
+
+/* Each individual threat box/card */
+.threat-box {
+  background-color: #0a0a0a; /* Dark background for a modern look*/
+  padding: 15px; /* Adds space inside the box */
+  border: 1px solid #00f0ff; /* Neon blue border to make it stand out */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover animation */
+}
+
+/* Hover effect to highlight the box when the user hovers over it */
+.threat-box:hover {
+  transform: scale(1.025); /* Slight zoom effect */
+  box-shadow: 0 0 25px #ff8000; /* Adds a glowing orange shadow on hover */
+}
+
+/* Heading style inside each threat box */
+.threat-box h3 {
+  color: #ffa127; /* Orange color for headings to make them stand out */
+}
+
+/* Paragraph style inside each threat box */
+.threat-box p {
+  margin: 10px 0; /* Adds spacing above and below the text */
+}
+
+/* Links to helpful resources inside each box */
+.threat-box a {
+  color:#00f0ff; /* light neon blue color to contrast against the dark background */
+  text-decoration: underline; /* Makes the link underlined */
+  font-weight: bold; /* Makes the link text stand out */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Adds a subtle hover animation */
+}
+
+/* Footer section that appears below the grid */
+.footer {
+  padding-left: 20px; /* Moves the content slightly to the right */
+  text-align: justify; /* Aligns the text evenly on both sides */
+  background-color: #0a0a0a;
+}
+
+/* Heading in the footer section */
+.footer h3 {
+  color: #ffa127; /* Matches heading color from the threat boxes */
+}
+
+/* Links in the footer */
+.footer a {
+  color: #00f0ff; /* light neon blue color */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.video-container {
+  position: fixed;/*Keeps the container in place even when scrolling*/
+  top: 0;/*Aligns the container to the top of the viewport*/
+  left: 0;/*Aligns the container to the left of the viewport*/
+  width: 100%;/*Container spans full width of the screen*/
+  height: 100%;/*Container spans full height of the screen*/
+  overflow: hidden;/*Hides any overflowing video content*/
+  z-index: -1;/*Puts the video behind all other content*/
+  opacity: 0.7;/*Sets the container to 70% opacity for semi-transparent effect*/
+}
+
+video {
+  position: absolute;/*Allows manual positioning inside the container*/
+  top: 50%;/*Centers video vertically relative to container*/
+  left: 50%;/*Centers video horizontally relative to container*/
+  min-width: 100%;/*Ensures video always covers full width*/
+  min-height: 100%;/*Ensures video always covers full height*/
+  width: auto;/*Maintains video’s aspect ratio on resizing*/
+  height: auto;/*Maintains video’s aspect ratio on resizing*/
+  transform: translate(-50%, -50%);/*Shifts video back by 50% to truly center it*/
+}
